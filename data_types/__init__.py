@@ -1,0 +1,6 @@
+from inferential_data_generation.data_types.registry import register_data_type
+from inferential_data_generation.data_types.ts_cov_text import TimeSeriesCovariateTextAssembler
+from inferential_data_generation.data_types.ts_target_only import TimeSeriesTargetOnlyAssembler
+
+register_data_type("ts_cov_text", TimeSeriesCovariateTextAssembler)
+register_data_type("ts_target_only", TimeSeriesTargetOnlyAssembler)

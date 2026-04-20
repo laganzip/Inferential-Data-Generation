@@ -1,0 +1,8 @@
+from inferential_data_generation.scenes.registry import register_scene
+from inferential_data_generation.scenes.commercial_hvac_event import CommercialHVACEventScene
+from inferential_data_generation.scenes.data_center_cooling_event import DataCenterCoolingEventScene
+from inferential_data_generation.scenes.temporal_physical_event import TemporalPhysicalEventScene
+
+register_scene("temporal_physical_event", TemporalPhysicalEventScene)
+register_scene("data_center_cooling_event", DataCenterCoolingEventScene)
+register_scene("commercial_hvac_event", CommercialHVACEventScene)

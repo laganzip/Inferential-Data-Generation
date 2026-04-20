@@ -1,0 +1,6 @@
+from inferential_data_generation.predictors.registry import register_predictor
+from inferential_data_generation.predictors.chronos2 import Chronos2InitialPredictor
+from inferential_data_generation.predictors.heuristic import HeuristicLoadPredictor
+
+register_predictor("chronos2", Chronos2InitialPredictor)
+register_predictor("heuristic", HeuristicLoadPredictor)
