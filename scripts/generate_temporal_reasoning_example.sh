@@ -129,7 +129,7 @@ mkdir -p "$(dirname "${DATA_OUTPUT}")" "${PLOT_OUTPUT_DIR}" "${MPLCONFIGDIR}"
 
 # 数据生成命令参数
 CLI_ARGS=(
-  -m inferential_data_generation.cli
+  -m inferential_data_generation.main.cli
   --scene "${SCENE}"
   --data-type "${DATA_TYPE}"
   --num-samples "${NUM_SAMPLES}"
@@ -146,7 +146,7 @@ CLI_ARGS=(
 
 # 可视化命令参数
 PLOT_ARGS=(
-  inferential_data_generation/visualize_demo.py
+  inferential_data_generation/main/visualize_demo.py
   --scene "${SCENE}"
   --data-type "${DATA_TYPE}"
   --num-plots "${NUM_PLOTS}"

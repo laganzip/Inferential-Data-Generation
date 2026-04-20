@@ -1,7 +1,7 @@
 from __future__ import annotations
 
-from inferential_data_generation.base import GenerationConfig
-from inferential_data_generation.llm_correction import LLMCorrectionConfig, LLMCorrectionGenerator
+from inferential_data_generation.main.base import GenerationConfig
+from inferential_data_generation.main.llm_correction import LLMCorrectionConfig, LLMCorrectionGenerator
 from inferential_data_generation.models.adapters.correction import LLMCorrectionAdapter, NoopCorrectionAdapter
 from inferential_data_generation.models.adapters.predictor import RegistryPredictorAdapter
 

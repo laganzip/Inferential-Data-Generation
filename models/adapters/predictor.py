@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Any
 
-from inferential_data_generation.base import GenerationConfig
+from inferential_data_generation.main.base import GenerationConfig
 from inferential_data_generation.models.adapters.base import BaseInitialPredictorAdapter
 from inferential_data_generation.predictors.registry import build_predictor
 

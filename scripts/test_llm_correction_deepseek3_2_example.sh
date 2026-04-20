@@ -167,7 +167,7 @@ mkdir -p "$(dirname "${DATA_OUTPUT}")" "${PLOT_OUTPUT_DIR}" "${MPLCONFIGDIR}"
 
 # 主流程参数
 GEN_ARGS=(
-  -m inferential_data_generation.generate_llm_correction_demo
+  -m inferential_data_generation.main.generate_llm_correction_demo
   --task random
   --num-samples "${NUM_SAMPLES}"
   --output "${DATA_OUTPUT}"
@@ -185,7 +185,7 @@ GEN_ARGS=(
 
 # 可视化参数
 VIS_ARGS=(
-  -m inferential_data_generation.visualize_llm_correction_demo
+  -m inferential_data_generation.main.visualize_llm_correction_demo
   --input "${DATA_OUTPUT}"
   --output-dir "${PLOT_OUTPUT_DIR}"
   --output-format "${OUTPUT_FORMAT}"

@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Any
 
-from inferential_data_generation.llm_correction import LLMCorrectionGenerator
+from inferential_data_generation.main.llm_correction import LLMCorrectionGenerator
 from inferential_data_generation.models.adapters.base import BaseCorrectionAdapter
 
 

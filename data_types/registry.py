@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Callable
 
-from inferential_data_generation.base import GenerationConfig
+from inferential_data_generation.main.base import GenerationConfig
 
 DATA_TYPE_REGISTRY: dict[str, Callable[[GenerationConfig], object]] = {}
 

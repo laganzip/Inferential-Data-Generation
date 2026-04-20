@@ -4,7 +4,7 @@ import argparse
 import json
 from pathlib import Path
 
-from inferential_data_generation.base import GenerationConfig, OutputConfig, SamplingConfig
+from inferential_data_generation.main.base import GenerationConfig, OutputConfig, SamplingConfig
 from inferential_data_generation.pipelines.generate import ModularGenerator
 import inferential_data_generation.data_types  # noqa: F401
 import inferential_data_generation.predictors  # noqa: F401

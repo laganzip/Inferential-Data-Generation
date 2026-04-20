@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
-from inferential_data_generation.base import GenerationConfig
+from inferential_data_generation.main.base import GenerationConfig
 from inferential_data_generation.data_types.basic import build_data_type_assembler
 from inferential_data_generation.models.basic import build_initial_predictor_adapter
 from inferential_data_generation.scenes.registry import build_scene

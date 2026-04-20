@@ -6,8 +6,8 @@ from pathlib import Path
 
 from matplotlib import pyplot as plt
 
-from inferential_data_generation.base import SamplingConfig
-from inferential_data_generation.visualize_demo import build_figure_from_series, resolve_font
+from inferential_data_generation.main.base import SamplingConfig
+from inferential_data_generation.main.visualize_demo import build_figure_from_series, resolve_font
 
 
 def parse_args() -> argparse.Namespace:

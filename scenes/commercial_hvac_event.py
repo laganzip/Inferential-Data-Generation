@@ -5,8 +5,8 @@ import math
 import random
 from typing import Any
 
-from inferential_data_generation.base import BaseSceneGenerator, GenerationConfig, SceneSample
-from inferential_data_generation.context_generation import ContextGenerationPayload, ContextGenerator
+from inferential_data_generation.main.base import BaseSceneGenerator, GenerationConfig, SceneSample
+from inferential_data_generation.main.context_generation import ContextGenerationPayload, ContextGenerator
 
 
 @dataclass(frozen=True)

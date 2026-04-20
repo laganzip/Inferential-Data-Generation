@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Any
 
-from inferential_data_generation.base import BaseInitialPredictor, GenerationConfig
+from inferential_data_generation.main.base import BaseInitialPredictor, GenerationConfig
 
 
 class HeuristicLoadPredictor(BaseInitialPredictor):

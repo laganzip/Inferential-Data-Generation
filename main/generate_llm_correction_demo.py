@@ -6,7 +6,7 @@ import json
 from pathlib import Path
 import random
 
-from inferential_data_generation.base import GenerationConfig, OutputConfig, SamplingConfig
+from inferential_data_generation.main.base import GenerationConfig, OutputConfig, SamplingConfig
 from inferential_data_generation.models.basic import build_correction_adapter
 from inferential_data_generation.pipelines.generate import ModularGenerator
 from inferential_data_generation.pipelines.llm_correction import apply_correction_to_records, load_jsonl

@@ -6,7 +6,7 @@ from typing import Any
 
 import requests
 
-from inferential_data_generation.base import GenerationConfig
+from inferential_data_generation.main.base import GenerationConfig
 
 
 @dataclass(frozen=True)

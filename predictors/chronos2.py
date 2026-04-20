@@ -5,7 +5,7 @@ from typing import Any
 import sys
 import warnings
 
-from inferential_data_generation.base import BaseInitialPredictor, GenerationConfig
+from inferential_data_generation.main.base import BaseInitialPredictor, GenerationConfig
 from inferential_data_generation.predictors.heuristic import HeuristicLoadPredictor
 
 
