@@ -1,6 +1,6 @@
 # Inferential Data Generation 快速入门
 
-## 1. 工程功能
+## 1. 代码功能
 
 `inferential_data_generation` 用来生成“可解释的时序推理数据”。
 
@@ -11,18 +11,18 @@
 4. 可选：再调用外部 LLM 生成“模型修正量”（`llm_correction_delta_values`）。
 5. 最终输出 JSONL，并可画图对比“真实值 / 初始预测 / 修正后预测”。
 
-## 2. 代码结构（先看这几个入口就够）
+## 2. 主要代码
 
-1. `inferential_data_generation/cli.py`
+1. `inferential_data_generation/main/cli.py`
 用途：基础数据集生成入口（不做 LLM 修正）。
 
-2. `inferential_data_generation/generate_llm_correction_demo.py`
+2. `inferential_data_generation/main/generate_llm_correction_demo.py`
 用途：生成数据并追加 LLM 修正结果，或读取现有 JSONL 只做修正。
 
-3. `inferential_data_generation/visualize_demo.py`
+3. `inferential_data_generation/main/visualize_demo.py`
 用途：画“真实值 vs 初始预测 vs 真实修正后曲线”。
 
-4. `inferential_data_generation/visualize_llm_correction_demo.py`
+4. `inferential_data_generation/main/visualize_llm_correction_demo.py`
 用途：画“真实值 vs 初始预测 vs LLM 修正后曲线”。
 
 5. 🌟`inferential_data_generation/scripts/generate_temporal_reasoning_example.sh`
@@ -129,7 +129,7 @@ CHRONOS2_MODEL_PATH=
 ### 5.1 这个脚本做什么
 
 1. 调 `python -m inferential_data_generation.cli` 生成 JSONL。
-2. 调 `inferential_data_generation/visualize_demo.py` 画图。
+2. 调 `inferential_data_generation/main/visualize_demo.py` 画图。
 
 ### 5.2 最小可运行配置
 
@@ -217,7 +217,7 @@ bash inferential_data_generation/scripts/test_llm_correction_deepseek3_2_example
 4. `NUM_SAMPLES`：生成样本数。
 5. `SEED`：随机种子，保证可复现。
 
-## 7. 结果文件里你会看到什么
+## 7. 结果文件
 
 ### 7.1 基础生成 JSONL 常见字段
 
@@ -261,7 +261,7 @@ bash inferential_data_generation/scripts/test_llm_correction_deepseek3_2_example
 3. 想新增预测器：在 `predictors/` 新增 predictor 并注册。
 4. 想改 LLM 修正规则：改 `llm_correction.py` 的 prompt 和解析逻辑。
 
-## 10. 一条建议
+## 10. 测试建议
 
 第一次接手时，不要一上来就开 LLM 全链路。先用下面顺序最稳：
 1. `PREDICTOR=heuristic` + `CONTEXT_GENERATION_MODE=template` 跑通基础生成。
